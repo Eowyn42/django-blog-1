@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'myblog',
+    'rest_framework'
 ]
 
 MIDDLEWARE = [
@@ -100,6 +101,11 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# REST Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/

@@ -6,6 +6,7 @@ from myblog.models import Post, Category, Categorization
 class CategorizationInline(admin.TabularInline):
     model = Categorization
     extra = 1
+    readonly_fields = ['category',]
 
 
 class PostAdmin(admin.ModelAdmin):
